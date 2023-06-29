@@ -1,0 +1,21 @@
+<div class="row">
+    <p class="text-primary">Game Control Center</p>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-primary" (click)="onGameStarted()">Start</button>
+        <button class="btn btn-danger" (click)="onGameStopped()">Stop</button>
+    </div>
+  </div>
+  <p *ngFor="let number of fib">{{number}}</p>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+        <app-even></app-even>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <app-odd></app-odd>
+    </div>
+  </div>

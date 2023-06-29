@@ -1,0 +1,15 @@
+{
+  "name": "web-development",
+  "version": "1.0.0",
+  "description": "web development with angular, typescript, html5, css3, bootstrap, expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emy Yeung",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.16.0",
+    "typescript": "^5.1.6"
+  }
+}

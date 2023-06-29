@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <app-servers 
+  (srCreated)="onServerCreated($event)"
+  (bpCreated)="onBlueprintCreated($event)"
+  ></app-servers>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" [disabled] = "servers.length === 0" (click)="onNameChanged()">Change Name</button>
+      <button class="btn btn-danger" (click)="onComponentDestroy()">Destroy</button>
+      <app-server 
+      *ngFor="let server of servers"
+      [serverEle]="server"
+      [name]="server.serverName"
+      >
+      <p #contentParagraph>
+        <strong *ngIf="server.type === 'server'" style="color: red">{{server.serverContent}}</strong>
+        <em *ngIf="server.type === 'blueprint'" style="color: blue;">{{server.serverContent}}</em>
+    </p>
+    </app-server>
+    </div>
+  </div>
+</div>
